@@ -38,7 +38,7 @@ export default function MyMovies() {
   const [base64Image, setBase64Image] = useState("");
   const [file, setFile] = useState(null);
   useEffect(() => {
-    console.log("Property Edit >>>>>", movieEdit);
+    console.log(" Edit >>>>>", movieEdit);
   }, [movieEdit]);
 
   const handleFileChange = (event) => {
@@ -94,7 +94,7 @@ export default function MyMovies() {
 
       // Send the HTTP request to update the property
       const response = await fetch(
-        `http://24.144.91.45:5000/movies/update/${movieEdit}`,
+        `http://localhost:5000/movies/update/${movieEdit}`,
         {
           method: "PUT", // Use "PUT" to update the resource
           headers: options.headers,
