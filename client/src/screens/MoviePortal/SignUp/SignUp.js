@@ -78,7 +78,7 @@ const SignUp = () => {
 
      //  console.log("data", data);
 
-     const res = await fetch(`http://localhost:5000/auth/register`, {
+     const res = await fetch(`http://24.144.91.45:5000/auth/register`, {
        headers: {
          "Content-Type": "application/json",
        },
