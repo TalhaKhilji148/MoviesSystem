@@ -1,4 +1,4 @@
-const BASE_URL = "http://24.144.91.45:5000";
+const BASE_URL = "http://localhost:5000";
 
 export const request = async (
   url,
