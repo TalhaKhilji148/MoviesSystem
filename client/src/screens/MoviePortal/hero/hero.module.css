@@ -1,0 +1,154 @@
+.container {
+  height: calc(100vh - 60px);
+  width: 100%;
+  margin-top: -950px;
+  z-index: 1;
+  position: relative;
+  object-fit: cover;
+  /* background-image: url("https://wallpaperaccess.com/full/1899348.jpg"); */
+  background-blend-mode: color-dodge;
+  overflow-x: hidden;
+}
+.carousel-image {
+  position: absolute;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.carousel-image + .carousel-image {
+  z-index: -1; /* Place the next image behind the current one */
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.carousel-image + .carousel-image {
+  z-index: -1; /* Place the next image behind the current one */
+}
+
+.carousel-image.active + .carousel-image {
+  opacity: 0.3; /* Adjust opacity to create a smooth transition effect */
+}
+.carousel-container {
+  overflow: hidden; /* Hide the overflow to clip the animation */
+  position: relative;
+}
+
+.carousel-container .carousel .slide {
+  animation: imageTransition 3s ease-in-out forwards;
+}
+
+@keyframes imageTransition {
+  0% {
+    transform: scale(1.2); /* Initial size and position for smoother entry */
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1); /* Regular size */
+    opacity: 1;
+  }
+}
+
+.wrapper > h2 {
+  font-size: 46px;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+  margin-bottom: 2.5rem;
+}
+
+.wrapper > h5 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 3rem;
+}
+
+.wrapper > .options {
+  width: 70%;
+  background-color: rgba(193, 192, 192, 0.6);
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.options > input {
+  height: 40px;
+  min-width: 80%;
+  max-width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(11, 11, 11, 0.8);
+  color: #f7efef;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.options > select:first-child {
+  color: #fff;
+}
+
+.options > .rangeInput {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.options > .searchIcon {
+  padding: 0.6rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    #171521 0%,
+    rgb(28, 18, 27) 35%,
+    rgb(37, 30, 41) 100%
+  );
+  fill: #fff;
+  cursor: pointer;
+}
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 768px) {
+  .wrapper > h2 {
+    font-size: 40px;
+  }
+
+  .wrapper > h5 {
+    font-size: 30px;
+  }
+
+  .wrapper > .options {
+    width: 90%;
+  }
+}

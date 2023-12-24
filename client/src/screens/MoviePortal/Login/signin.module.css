@@ -1,0 +1,120 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Star_Movies_2023.svg/2560px-Star_Movies_2023.svg.png"); */
+  background-color: white;
+  background-size: cover;
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+.logo{
+  width: 70%;
+  height: 43%;
+  margin-left: 20%;
+  /* margin-right: 20%; */
+  display: flex;
+  align-items: center;
+  align-self: center;
+ 
+}
+.wrapper {
+  margin-right: 10%;
+  height: 70%;
+  width: 35.5vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.wrapper > h2 {
+  font-family: "Open Sans", sans-serif;
+
+  color: #0369a1;
+  text-align: center;
+  margin: 2.5rem 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+}
+
+form > input {
+  width: 50%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+form > label {
+  align-self: center;
+  width: 50%;
+  cursor: pointer;
+  transition: 150ms all;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+form > label:hover {
+  color: #444;
+}
+
+form > button {
+  outline: none;
+  background-color: red;
+  border-radius: 12px;
+  padding: 0.5rem 1.25rem;
+  font-size: 18px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-top: 1rem;
+}
+
+form > button:hover {
+  background-color: #c6c312;
+  border-color: #c6c312;
+  color: white;
+}
+
+form > p {
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form > p > a {
+  text-decoration: none;
+  font-size: 17px;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 992px) {
+  .wrapper {
+    height: 105vh;
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    height: 105vh;
+    width: 50vw;
+  }
+}
+

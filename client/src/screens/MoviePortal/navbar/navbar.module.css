@@ -1,0 +1,294 @@
+.container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;    
+  z-index: 9999;
+  background-color: rgb(28, 23, 23);
+  position: sticky;
+
+}
+
+.container.scrolled {
+  position: sticky;
+  top: 0;
+  background-color: rgba(5, 4, 4, 0.6); /* Use rgba for transparency */
+  box-shadow: -5px 5px 19px -5px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: -5px 5px 19px -5px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: -5px 5px 19px -5px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(5px); /* Adjust the blur value as needed */
+}
+
+
+
+.navigation,
+.hamburgerIcon {
+  display: none;
+}
+
+.wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1.25rem;
+}
+.logo{
+  margin-top: 10px;
+  height: 95px;
+  width: 100px;
+}
+.left {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0369a1;
+  margin-left: -120px;
+}
+.righty {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  color: #ffffff;
+}
+.righty:hover {
+  text-decoration: none;
+  font-size: 19px;
+  gap: 1rem;
+  color: rgb(80, 177, 230);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: -80px;
+}
+
+.center > .listItem {
+  color: #222;
+  transition: 150ms all ease-in-out;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.center > .listItem:hover {
+  text-decoration: none;
+
+  color: rgb(0, 81, 255);
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #eae9f0;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.right > a:first-child {
+  padding: 0.1rem 1.2rem;
+  background-color: #0369a1;
+  color: #ffffff;
+  
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 300;
+  transition: 150ms all;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.right > a:first-child:hover {
+  border-color: #020202;
+  color: #f6f6ff;
+  background-color: rgb(3, 83, 126);
+}
+
+.right > a:nth-child(2) {
+  color: #c8c7cf;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.right > a {
+  text-decoration: none;
+}
+
+.right > .list {
+  padding: 0.25rem 0.75rem;
+  background-color: #1c1c2b;
+  color: #faecec;
+  border-radius: 5px;
+  transition: 150ms all;
+  cursor: pointer;
+}
+
+.right > .list:hover {
+  color: rgb(3 105 161);
+  background-color: rgb(3 105 161);
+}
+
+.right > .profileImg {
+  width: 33px;
+  height: 33px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.right > .logoutBtn {
+  cursor: pointer;
+  color: rgb(219, 39, 39);
+  transition: 1500ms all ease-in-out;
+  margin-right: -150px;
+  font-weight: 700;
+}
+
+.right > .logoutBtn:hover {
+  color: rgb(3 105 161);
+}
+
+/* list property */
+.listPropertyForm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 120vh;
+  width: 100vw;
+  /* color:"white";    */
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999999999;
+  margin-top: -70px;
+}
+
+.listPropertyWrapper {
+  position: relative;
+  background-color: #fff;
+  height: 790px;
+  width: 135vw;
+  border-radius: 20px;
+  margin-top: -20px;
+}
+
+.listPropertyWrapper > h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2.5rem;
+}
+
+.listPropertyWrapper > form > div > label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-right: 1rem;
+}
+
+.listPropertyWrapper button {
+  margin-top: 0.1rem;
+}
+
+.removeIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 992px) {
+  .listPropertyWrapper {
+    height: 95vh;
+    width: 60vw;
+  }
+
+  .listPropertyWrapper button {
+    margin-top: 0;
+  }
+
+  .listPropertyWrapper > h2 {
+    margin: 1.75rem 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .listPropertyWrapper {
+    position: absolute;
+    left: 18rem;
+  }
+
+  .wrapper {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .hamburgerIcon {
+    display: block;
+    color: #c8c7cf;
+    margin-left: 1rem;
+    font-size: 26px;
+  }
+
+  .center > input {
+    background-color: transparent;
+  }
+
+  .mobileCloseIcon {
+    color: rgb(0, 0, 0);
+    background-color:"red";
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    font-size: 24px;
+  }
+
+  .navigation {
+    width: 75%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    background-color: #fff9f9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .modal {
+    background-color: #fff;
+  }
+}
