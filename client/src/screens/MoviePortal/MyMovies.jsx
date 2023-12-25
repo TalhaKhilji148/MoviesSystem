@@ -38,7 +38,7 @@ export default function MyMovies() {
   const [base64Image, setBase64Image] = useState("");
   const [file, setFile] = useState(null);
   useEffect(() => {
-    console.log("Property Edit >>>>>", movieEdit);
+    console.log(" Edit >>>>>", movieEdit);
   }, [movieEdit]);
 
   const handleFileChange = (event) => {
@@ -92,7 +92,6 @@ export default function MyMovies() {
       };
       console.log("334", requestData);
 
-      // Send the HTTP request to update the property
       const response = await fetch(
         `http://localhost:5000/movies/update/${movieEdit}`,
         {
@@ -198,11 +197,11 @@ export default function MyMovies() {
                     </Link>
                     {!showMobileNav && showForm && (
                       <div
-                        className={classes.listPropertyForm}
+                        className={classes.listBlogForm}
                         onClick={handleCloseForm}
                       >
                         <div
-                          className={classes.listPropertyWrapper}
+                          className={classes.listBlogWrapper}
                           onClick={(e) => e.stopPropagation()}
                         >
                           <h2 className="text-xl mb-10">Update Movie</h2>
