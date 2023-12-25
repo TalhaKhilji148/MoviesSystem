@@ -142,7 +142,9 @@ export default function MyMovies() {
     <div className="flex w-full justify-center  items-center 2xl:px-20">
       <div className="flex flex-col md:p-12 px-4">
         {MoviesData && MoviesData.length > 0 ? (
-          <h3 className="text-black font-semibold text-3xl text-center my-2">My Movies</h3>
+          <h3 className="text-black font-semibold text-3xl text-center my-2">
+            My Movies
+          </h3>
         ) : (
           <h3 className=" text-3xl mt-32 text-center my-2 text-red-600">
             You don't have any Movies yet!
@@ -197,11 +199,11 @@ export default function MyMovies() {
                     </Link>
                     {!showMobileNav && showForm && (
                       <div
-                        className={classes.listBlogForm}
+                        className={classes.listMovieForm}
                         onClick={handleCloseForm}
                       >
                         <div
-                          className={classes.listBlogWrapper}
+                          className={classes.listMovieWrapper}
                           onClick={(e) => e.stopPropagation()}
                         >
                           <h2 className="text-xl mb-10">Update Movie</h2>
